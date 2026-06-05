@@ -1,3 +1,6 @@
+import json
+from pathlib import Path
+from datetime import datetime
 from fastapi import FastAPI # type: ignore
 from llm.groq_provider import generate
 from pydantic import BaseModel
@@ -5,6 +8,8 @@ from agents.script.script_agent import generate_script as build_script # type: i
 from agents.storyboard.storyboard_agent import create_storyboard # type: ignore
 from agents.animation.animation_agent import generate_animation as build_animation # type: ignore
 
+PROJECTS_DIR = Path("projects")
+PROJECTS_DIR.mkdir(exist_ok=True)
 app = FastAPI()
 
 @app.get("/")
@@ -14,7 +19,7 @@ def root():
 @app.get("/chat")
 def chat():
     answer = generate(
-        "Explain hypertension in simple words."
+        "Explain  general anesthesia in simple words."
     )
 
     return {
@@ -39,15 +44,74 @@ def generate_storyboard(req: TopicRequest):
         "storyboard": storyboard
     }
 
+# @app.post("/generate-animation")
+# def generate_animation(req: TopicRequest):
+
+#     script = build_script(req.topic)
+#     storyboard = create_storyboard(script)
+#     animation = build_animation(storyboard) # type: ignore
+
+#     return {
+#         "script": script,
+#         "storyboard": storyboard,
+#         "animation": animation
+#     }
 @app.post("/generate-animation")
 def generate_animation(req: TopicRequest):
 
+    # Generate content
     script = build_script(req.topic)
-    storyboard = create_storyboard(script)
-    animation = build_animation(storyboard) # type: ignore
 
-    return {
+    storyboard = create_storyboard(script)
+
+    animation = build_animation(storyboard)
+
+    # Create project folder
+    timestamp = datetime.now().strftime(
+        "%Y%m%d_%H%M%S"
+    )
+
+    project_name = (
+        req.topic
+        .replace(" ", "_")
+        .lower()
+    )
+
+    project_dir = (
+        PROJECTS_DIR /
+        f"{project_name}_{timestamp}"
+    )
+
+    project_dir.mkdir(parents=True)
+
+    # Save everything
+    output = {
+        "topic": req.topic,
         "script": script,
         "storyboard": storyboard,
         "animation": animation
+    }
+
+    json_file = (
+        project_dir /
+        "storyboard.json"
+    )
+
+    with open(
+        json_file,
+        "w",
+        encoding="utf-8"
+    ) as f:
+
+        json.dump(
+            output,
+            f,
+            indent=4,
+            ensure_ascii=False
+        )
+
+    return {
+        "status": "success",
+        "project_dir": str(project_dir),
+        "json_file": str(json_file)
     }

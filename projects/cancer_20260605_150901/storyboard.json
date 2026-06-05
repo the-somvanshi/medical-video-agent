@@ -1,0 +1,214 @@
+{
+    "topic": "cancer",
+    "script": "**Title: Understanding Cancer: The Basics**\n\n**Hook (0:00 - 0:30)**\n(Animated cells dividing on screen)\nNarrator: \"Did you know that every day, your body produces over 50,000 new cells? But sometimes, these cells can become rogue, leading to a disease that affects millions of people worldwide. Today, we're going to talk about cancer.\"\n\n**Simple Explanation (0:30 - 2:30)**\n(Animated DNA double helix on screen)\nNarrator: \"So, what is cancer? In simple terms, cancer is a disease where abnormal cells grow and multiply uncontrollably, damaging the healthy cells around them. This happens when there's a mistake in the cell's DNA, like a typo in a book. Normally, our cells have a built-in system to correct these mistakes, but sometimes, the mistake can't be fixed, and the cell becomes cancerous.\"\n\n(Animated cancer cells growing on screen)\nNarrator: \"There are over 100 types of cancer, but they all start with this same process. Cancer cells can invade nearby tissues and organs, and even spread to other parts of the body through the bloodstream or lymphatic system.\"\n\n**Real-Life Example (2:30 - 4:00)**\n(Video of a person sharing their cancer story)\nNarrator: \"Let's meet Sarah, a 35-year-old mother of two who was diagnosed with breast cancer. Sarah noticed a lump in her breast during a self-exam and went to see her doctor. After a series of tests, she was diagnosed with stage 1 breast cancer.\"\n\n(Video of Sarah undergoing treatment)\nNarrator: \"Sarah underwent surgery, chemotherapy, and radiation therapy to treat her cancer. She's now in remission and is advocating for cancer awareness and early detection.\"\n\n**Conclusion (4:00 - 4:30)**\n(Animated cells dividing on screen again)\nNarrator: \"Cancer is a complex and multifaceted disease, but by understanding the basics, we can take steps to prevent, detect, and treat it. Remember, early detection is key, so make sure to get regular check-ups and screenings. If you or someone you know is affected by cancer, there is hope and support available.\"\n\n(Closing shot with a call-to-action on screen)\nNarrator: \"Thanks for watching! If you want to learn more about cancer or share your own story, please visit our website or comment below. Together, we can make a difference in the fight against cancer.\"",
+    "storyboard": "[\n  {\n    \"scene_number\": 1,\n    \"visual_description\": \"Animated cells dividing on screen\",\n    \"voice_over_text\": \"Did you know that every day, your body produces over 50,000 new cells? But sometimes, these cells can become rogue, leading to a disease that affects millions of people worldwide. Today, we're going to talk about cancer.\",\n    \"on_screen_text\": \"\",\n    \"camera_motion\": \"Static shot\"\n  },\n  {\n    \"scene_number\": 2,\n    \"visual_description\": \"Animated DNA double helix on screen\",\n    \"voice_over_text\": \"So, what is cancer? In simple terms, cancer is a disease where abnormal cells grow and multiply uncontrollably, damaging the healthy cells around them. This happens when there's a mistake in the cell's DNA, like a typo in a book. Normally, our cells have a built-in system to correct these mistakes, but sometimes, the mistake can't be fixed, and the cell becomes cancerous.\",\n    \"on_screen_text\": \"\",\n    \"camera_motion\": \"Zoom in\"\n  },\n  {\n    \"scene_number\": 3,\n    \"visual_description\": \"Animated cancer cells growing on screen\",\n    \"voice_over_text\": \"There are over 100 types of cancer, but they all start with this same process. Cancer cells can invade nearby tissues and organs, and even spread to other parts of the body through the bloodstream or lymphatic system.\",\n    \"on_screen_text\": \"\",\n    \"camera_motion\": \"Pan across\"\n  },\n  {\n    \"scene_number\": 4,\n    \"visual_description\": \"Video of a person sharing their cancer story\",\n    \"voice_over_text\": \"Let's meet Sarah, a 35-year-old mother of two who was diagnosed with breast cancer. Sarah noticed a lump in her breast during a self-exam and went to see her doctor. After a series of tests, she was diagnosed with stage 1 breast cancer.\",\n    \"on_screen_text\": \"Sarah's Story\",\n    \"camera_motion\": \"Interview style\"\n  },\n  {\n    \"scene_number\": 5,\n    \"visual_description\": \"Video of Sarah undergoing treatment\",\n    \"voice_over_text\": \"Sarah underwent surgery, chemotherapy, and radiation therapy to treat her cancer. She's now in remission and is advocating for cancer awareness and early detection.\",\n    \"on_screen_text\": \"\",\n    \"camera_motion\": \"Follow camera\"\n  },\n  {\n    \"scene_number\": 6,\n    \"visual_description\": \"Animated cells dividing on screen again\",\n    \"voice_over_text\": \"Cancer is a complex and multifaceted disease, but by understanding the basics, we can take steps to prevent, detect, and treat it. Remember, early detection is key, so make sure to get regular check-ups and screenings. If you or someone you know is affected by cancer, there is hope and support available.\",\n    \"on_screen_text\": \"\",\n    \"camera_motion\": \"Static shot\"\n  },\n  {\n    \"scene_number\": 7,\n    \"visual_description\": \"Closing shot with a call-to-action on screen\",\n    \"voice_over_text\": \"Thanks for watching! If you want to learn more about cancer or share your own story, please visit our website or comment below. Together, we can make a difference in the fight against cancer.\",\n    \"on_screen_text\": \"Learn More at [website URL]\",\n    \"camera_motion\": \"Zoom out\"\n  }\n]",
+    "animation": [
+        {
+            "scene_number": 1,
+            "elements": [
+                {
+                    "type": "image",
+                    "content": "Animated cells dividing",
+                    "position": "center"
+                },
+                {
+                    "type": "text",
+                    "content": "Did you know that every day, your body produces over 50,000 new cells? But sometimes, these cells can become rogue, leading to a disease that affects millions of people worldwide. Today, we're going to talk about cancer.",
+                    "position": "bottom"
+                }
+            ],
+            "animations": [
+                {
+                    "target": "cells",
+                    "action": "fade_in",
+                    "duration": 2
+                },
+                {
+                    "target": "text",
+                    "action": "fade_in",
+                    "duration": 2
+                }
+            ],
+            "timing": {
+                "start": 0,
+                "end": 10
+            }
+        },
+        {
+            "scene_number": 2,
+            "elements": [
+                {
+                    "type": "diagram",
+                    "content": "Animated DNA double helix",
+                    "position": "center"
+                },
+                {
+                    "type": "text",
+                    "content": "So, what is cancer? In simple terms, cancer is a disease where abnormal cells grow and multiply uncontrollably, damaging the healthy cells around them. This happens when there's a mistake in the cell's DNA, like a typo in a book. Normally, our cells have a built-in system to correct these mistakes, but sometimes, the mistake can't be fixed, and the cell becomes cancerous.",
+                    "position": "bottom"
+                }
+            ],
+            "animations": [
+                {
+                    "target": "DNA",
+                    "action": "zoom",
+                    "duration": 3
+                },
+                {
+                    "target": "text",
+                    "action": "fade_in",
+                    "duration": 2
+                }
+            ],
+            "timing": {
+                "start": 10,
+                "end": 25
+            }
+        },
+        {
+            "scene_number": 3,
+            "elements": [
+                {
+                    "type": "image",
+                    "content": "Animated cancer cells growing",
+                    "position": "center"
+                },
+                {
+                    "type": "text",
+                    "content": "There are over 100 types of cancer, but they all start with this same process. Cancer cells can invade nearby tissues and organs, and even spread to other parts of the body through the bloodstream or lymphatic system.",
+                    "position": "bottom"
+                }
+            ],
+            "animations": [
+                {
+                    "target": "cancer cells",
+                    "action": "pan",
+                    "duration": 4
+                },
+                {
+                    "target": "text",
+                    "action": "fade_in",
+                    "duration": 2
+                }
+            ],
+            "timing": {
+                "start": 25,
+                "end": 40
+            }
+        },
+        {
+            "scene_number": 4,
+            "elements": [
+                {
+                    "type": "video",
+                    "content": "Video of a person sharing their cancer story",
+                    "position": "center"
+                },
+                {
+                    "type": "text",
+                    "content": "Sarah's Story",
+                    "position": "top"
+                },
+                {
+                    "type": "text",
+                    "content": "Let's meet Sarah, a 35-year-old mother of two who was diagnosed with breast cancer. Sarah noticed a lump in her breast during a self-exam and went to see her doctor. After a series of tests, she was diagnosed with stage 1 breast cancer.",
+                    "position": "bottom"
+                }
+            ],
+            "animations": [
+                {
+                    "target": "video",
+                    "action": "fade_in",
+                    "duration": 2
+                }
+            ],
+            "timing": {
+                "start": 40,
+                "end": 60
+            }
+        },
+        {
+            "scene_number": 5,
+            "elements": [
+                {
+                    "type": "video",
+                    "content": "Video of Sarah undergoing treatment",
+                    "position": "center"
+                },
+                {
+                    "type": "text",
+                    "content": "Sarah underwent surgery, chemotherapy, and radiation therapy to treat her cancer. She's now in remission and is advocating for cancer awareness and early detection.",
+                    "position": "bottom"
+                }
+            ],
+            "animations": [
+                {
+                    "target": "camera",
+                    "action": "follow",
+                    "duration": 5
+                }
+            ],
+            "timing": {
+                "start": 60,
+                "end": 75
+            }
+        },
+        {
+            "scene_number": 6,
+            "elements": [
+                {
+                    "type": "image",
+                    "content": "Animated cells dividing",
+                    "position": "center"
+                },
+                {
+                    "type": "text",
+                    "content": "Cancer is a complex and multifaceted disease, but by understanding the basics, we can take steps to prevent, detect, and treat it. Remember, early detection is key, so make sure to get regular check-ups and screenings. If you or someone you know is affected by cancer, there is hope and support available.",
+                    "position": "bottom"
+                }
+            ],
+            "animations": [
+                {
+                    "target": "cells",
+                    "action": "fade_in",
+                    "duration": 2
+                }
+            ],
+            "timing": {
+                "start": 75,
+                "end": 95
+            }
+        },
+        {
+            "scene_number": 7,
+            "elements": [
+                {
+                    "type": "image",
+                    "content": "Closing shot",
+                    "position": "center"
+                },
+                {
+                    "type": "text",
+                    "content": "Learn More at [website URL]",
+                    "position": "center"
+                },
+                {
+                    "type": "text",
+                    "content": "Thanks for watching! If you want to learn more about cancer or share your own story, please visit our website or comment below. Together, we can make a difference in the fight against cancer.",
+                    "position": "bottom"
+                }
+            ],
+            "animations": [
+                {
+                    "target": "camera",
+                    "action": "zoom",
+                    "duration": 3
+                }
+            ],
+            "timing": {
+                "start": 95,
+                "end": 110
+            }
+        }
+    ]
+}
