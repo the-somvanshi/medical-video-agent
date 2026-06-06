@@ -10,7 +10,7 @@ def create_image_prompt(scene):
     voice_over = scene.get("voice_over_text", "")
 
     prompt = f"""
-You are an expert medical IMAGE prompt engineer.
+You are an expert IMAGE prompt engineer.
 
 Convert the scene into a SINGLE high-quality IMAGE generation prompt.
 
@@ -20,8 +20,7 @@ IMPORTANT RULES:
 - Do NOT include time-based actions (no "showing", "transition", "sequence")
 - Focus on one frozen moment in time
 - Medical educational style
-- Scientifically accurate anatomy and biology
-- Ultra detailed, professional medical illustration
+- Ultra detailed, professional illustration
 - Pure white background when appropriate
 - No text
 - No labels
@@ -147,13 +146,38 @@ def create_prompt_file(storyboard_path):
     print(
         f"\nPrompt file created:\n{prompt_path}"
     )
+    import subprocess
+    import time
+
+# Start server.js
+    server_process = subprocess.Popen(
+    [
+        "node",
+        r"E:\JS_PROJECTS\PLAYWIRTE\server.js"
+    ]
+)
+
+# Give server time to start
+    time.sleep(5)
+
+# Run worker.js and pass prompt.json path
+    subprocess.run(
+    [
+        "node",
+        r"E:\JS_PROJECTS\PLAYWIRTE\worker.js",
+        str(prompt_path)
+    ],
+    check=True
+)
 
     return prompt_path
 
 
+import sys
+
 if __name__ == "__main__":
 
-    storyboard_file = r"E:\JS_PROJECTS\DIRECTOR_AGENT\medical-video-agent\projects\general_anesthesia_20260605_195119\storyboard.json"
+    storyboard_file = sys.argv[1]
 
     create_prompt_file(
         storyboard_file

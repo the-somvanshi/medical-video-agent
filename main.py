@@ -1,3 +1,4 @@
+from asyncio import subprocess
 import json
 from pathlib import Path
 from datetime import datetime
@@ -109,6 +110,16 @@ def generate_animation(req: TopicRequest):
             indent=4,
             ensure_ascii=False
         )
+    import subprocess
+
+    subprocess.run(
+    [
+        "python",
+        "prompt_worker.py",
+        str(json_file)
+    ],
+    check=True
+    )
 
     return {
         "status": "success",
